@@ -1,5 +1,7 @@
 package com.tw.apistackbase.entity;
 
+import com.tw.apistackbase.repository.ProcuratorateRepo;
+import com.tw.apistackbase.repository.ProsecutorRepo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
