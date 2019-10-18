@@ -3,7 +3,6 @@ package com.tw.apistackbase.controller;
 import com.tw.apistackbase.entity.Prosecutor;
 import com.tw.apistackbase.repository.ProsecutorRepo;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

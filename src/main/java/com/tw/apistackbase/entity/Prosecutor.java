@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 
 @Entity
 public class Prosecutor {
@@ -19,9 +20,13 @@ public class Prosecutor {
     @NotNull
     private String name;
 
+    @Column(columnDefinition = "INT(3) CHECK (age > 18)")
     private Integer age;
+
+    @Column(columnDefinition = "VARCHAR(10) CHECK (sex IN ('Male', 'Female'))")
     private String sex;
-    private String birthday;
+
+    private LocalDate birthday;
     private String idNumber;
     private Integer experience;
 
@@ -41,11 +46,11 @@ public class Prosecutor {
         this.sex = sex;
     }
 
-    public String getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(String birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 
